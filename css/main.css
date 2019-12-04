@@ -207,14 +207,77 @@ header {
   color: #fff;
 }
 
-footer {
+.footer {
   background-color: #222;
   font-size: .75rem;
-  text-align: center;
-  padding: .3em .75em;
+  text-align: left;
+  padding: .75em .75em .3em;
 }
 
-footer small {
+.footer small {
   font-size: .75rem;
   color: #fff;
+}
+
+.footer h2 {
+  margin-top: 0;
+  color: #fff;
+  text-transform: uppercase;
+  padding-right: 1.5rem;
+}
+
+.footer ul {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.links {
+  padding: 0 1rem;
+  display: inline-flex;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  margin: .75rem;
+  padding: 0 1rem;
+  display: flex;
+}
+
+.social > li {
+  margin: 0 .5em;
+  width: 3em;
+}
+
+.social > li:first-of-type {
+  width: 15em;
+}
+
+.social h3 {
+  font-size: .75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.social img {
+  width: 25px;
+}
+
+.copyright {
+  padding: 0 1rem;
+  width: 100%;
+  text-align: center;
 }
