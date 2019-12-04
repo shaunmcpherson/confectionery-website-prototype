@@ -121,9 +121,11 @@ header {
 .caption {
   display: block;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   background-color: #fff;
   color: #333;
+  width: 100%;
+  max-width: 50em;
 }
 
 .cards {
@@ -171,14 +173,14 @@ header {
   min-width: 4em;
   font-size: .75rem;
   font-style: italic;
-  color: #333;
+  color: #666;
 }
 
 .cards dd:first-of-type {
   font-size: 1rem;
   min-width: 6em;
   font-style: normal;
-  color: #000;
+  color: #333;
 }
 
 .cards div {
@@ -194,16 +196,16 @@ header {
   padding: .25em .5em;
   background-color: #eee;
   border-radius: 5px;
-  color: #000;
+  color: #333;
   font-size: .75;
   font-style: italic;
   text-transform: lowercase;
-  border: 2px solid #bbb;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .cards a:hover {
-  background-color: #bbb;
+  background-color: #333;
+  text-decoration: none;
   color: #fff;
 }
 
@@ -262,7 +264,7 @@ header {
 }
 
 .social > li:first-of-type {
-  width: 15em;
+  width: 20em;
 }
 
 .social h3 {
