@@ -32,8 +32,9 @@ header {
 
 .header h1 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.125rem;
   padding: 0;
+  font-family: Lobster, sans-serif;
 }
 
 .header img {
@@ -47,7 +48,7 @@ header {
   padding: 0;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   list-style-type: none;
   border-top: 1px solid #000;
@@ -57,6 +58,22 @@ header {
   padding: .4rem 0;
   display: block;
   text-align: center;
+}
+
+.first {
+  background-color: #1e1e1e;
+}
+
+.second {
+  background-color: #1a1a1a;
+}
+
+.third {
+  background-color: #151515;
+}
+
+.fourth {
+  background-color: #111;
 }
 
 .buttons li {
@@ -73,22 +90,22 @@ header {
   background-color: #000;
 }
 
-.mid {
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
-}
-
 .img-flex {
   display: block;
   width: 100%;
 }
 
+.content {
+  padding: 0 1rem .5rem;
+  background-color: rgba(0, 0, 0, 1);
+}
+
 .content h2 {
   display: inline;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
-  line-height: 3.5rem;
-  background-color: rgba(100, 100, 100, .3);
+  line-height: 2.25rem;
+  border-radius: 5px;
 }
 
 .content p {
@@ -103,29 +120,19 @@ header {
   display: block;
   width: 100%;
   position: relative;
-  max-height: 500px;
+  max-height: 550px;
   overflow: hidden;
 }
 
-.content {
-  left: 50%;
-  transform: translate(-50%);
-  margin: 0 .5rem;
-  padding: 0 1rem;
-  position: absolute;
-  bottom: 1.5rem;
-  width: 100%;
-  max-width: 50em;
-}
-
 .caption {
-  display: block;
+  display: flex;
   margin: 0;
   padding: 0 1.5rem;
   background-color: #fff;
   color: #333;
   width: 100%;
   max-width: 50em;
+  justify-content: center;
 }
 
 .cards {
@@ -135,12 +142,18 @@ header {
   text-align: center;
 }
 
+.overflow {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 .cards li {
   display: inline-block;
   margin: 0 .5em 1em;
-  max-width: 15em;
   padding: 1em;
   background-color: #eee;
+  width: 100%;
   border-radius: 10px;
   text-align: left;
 }
@@ -209,11 +222,60 @@ header {
   color: #fff;
 }
 
+.location {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  justify-content: center;
+}
+
+.location img {
+  display: block;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 25em;
+}
+
+.contents {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.location-content {
+  padding: 1rem;
+}
+
+.location a {
+  display: inline-flex;
+  padding: .25em .5em;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 2px solid #333;
+  color: #333;
+  font-size: .75;
+  font-style: italic;
+  text-transform: lowercase;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.location a:hover {
+  background-color: #333;
+  text-decoration: none;
+  color: #fff;
+}
+
 .footer {
   background-color: #222;
   font-size: .75rem;
   text-align: left;
   padding: .75em .75em .3em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .footer small {
@@ -233,6 +295,12 @@ header {
   margin-bottom: 1.5rem;
   padding-left: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer li {
+  text-align: left;
 }
 
 .footer a {
@@ -242,6 +310,7 @@ header {
 .links {
   padding: 0 1rem;
   display: inline-flex;
+  flex-direction: column;
 }
 
 .links a {
@@ -253,14 +322,20 @@ header {
 }
 
 .social {
-  margin: .75rem;
+  margin: 0 .75rem .75rem;
   padding: 0 1rem;
-  display: flex;
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .social > li {
   margin: 0 .5em;
   width: 3em;
+  display: flex;
 }
 
 .social > li:first-of-type {
@@ -268,6 +343,9 @@ header {
 }
 
 .social h3 {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
   font-size: .75rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -276,10 +354,188 @@ header {
 
 .social img {
   width: 25px;
+  height: 25px;
+  display: block;
 }
 
 .copyright {
   padding: 0 1rem;
   width: 100%;
   text-align: center;
+}
+
+@media only screen and (min-width: 25em) {
+
+  nav li {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    border-top: 1px solid #000;
+  }
+
+  .buttons li {
+    flex-basis: 50%;
+  }
+
+  .first,
+  .second {
+    background-color: #1e1e1e;
+  }
+
+  .third,
+  .fourth {
+    background-color: #1a1a1a;
+  }
+
+  .cards {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .cards li {
+    max-width: 46%;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  .banner {
+    max-height: 500px;
+  }
+
+  .content {
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(100, 100, 100, .0);
+    margin: 0 .5rem;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+    max-width: 50em;
+  }
+
+  .content h2 {
+    background-color: rgba(0, 0, 0, 1);
+    padding: .5rem;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .cards li {
+    max-width: 15em;
+  }
+
+  .buttons {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    border-top: 1px solid #000;
+  }
+
+  .first,
+  .second,
+  .third,
+  .fourth {
+    background-color: #1c1c1c;
+  }
+
+  .mid {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+
+  .one {
+    display: flex;
+    position: inherit;
+    left: auto;
+    top: auto;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+  }
+
+  h1,
+  nav {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+
+  .contents {
+    padding: 1rem 0;
+    margin: 0 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
+
+  .overflow {
+    display: flex;
+    position: inherit;
+    left: auto;
+    top: auto;
+  }
+
+  .contents {
+    padding: 1rem 0;
+    margin: 0 4rem;
+  }
+
 }
